@@ -1,18 +1,17 @@
 ﻿Console.WriteLine("Enter any integer number");
 int num = int.Parse(Console.ReadLine());
-int numCorrect = num;
 
-if (numCorrect < 0)
+if (num < 0)
 {
-    numCorrect = -numCorrect;
+    num = -num;
 }
 
-string numStr = numCorrect.ToString();
+string numStr = num.ToString();
 int numLen = numStr.Length;
 
 if (numLen >= 3)
 {
-    int resTemp = numCorrect % (Convert.ToInt32(Math.Pow(10,numLen - 2)));
+    int resTemp = num % (Convert.ToInt32(Math.Pow(10,numLen - 2)));
     int res = resTemp / (Convert.ToInt32(Math.Pow(10,numLen - 3)));
     Console.WriteLine(res);
 }
